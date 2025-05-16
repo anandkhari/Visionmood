@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Best ads</title>
+    <meta name="description" content="Artmonks is the best video production company in India. Our film production house is based in Bangalore providing top-notch video production services.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #f9004d;
+            --secondary-color: #ffffff;
+            --text-color: #333333;
+            --light-gray: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+        }
+        
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+        
+        .play-btn {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .play-btn:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+        
+        .section-title h2 {
+            font-weight: 700;
+            color: var(--text-color);
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .featured-work {
+  background: url('https://img.freepik.com/free-vector/vector-damask-seamless-pattern-background-classical-luxury-old-fashioned-damask-ornament-royal-victorian-seamless-texture-wallpapers-textile-wrapping-exquisite-floral-baroque-template_1217-738.jpg?semt=ais_hybrid&w=740') center center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 10px 0;
+}
+
+.featured-work::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.featured-work .container {
+  position: relative;
+  z-index: 2;
+}
+
+.featured-work h2.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.featured-work p.lead {
+  color: #ddd;
+}
+
+@media (max-width: 574px) {
+  .featured-work h2.section-title {
+    font-size: 24px;
+  }
+}
+
+.work-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 400px; 
+    width: 100%;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.05);
+}
+
+.work-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.work-card:hover img {
+  transform: scale(1.1);
+}
+
+.work-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.work-card:hover .work-overlay {
+  opacity: 1;
+}
+
+.work-overlay i {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.work-overlay h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.work-overlay p {
+  margin: 0;
+  font-size: 16px;
+}
+
+
+        
+        .about-section {
+            padding: 80px 0;
+        }
+        
+        .services-section {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+            background-image: url('https://img.freepik.com/free-vector/vector-damask-seamless-pattern-background-classical-luxury-old-fashioned-damask-ornament-royal-victorian-seamless-texture-wallpapers-textile-wrapping-exquisite-floral-baroque-template_1217-738.jpg?semt=ais_hybrid&w=740');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card i {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            padding: 10px 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .navbar {
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }  
+
+        .navbar-brand img {
+    height: 40px;       /* Adjust as needed (usually 35-45px fits well) */
+    max-height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+        
+        .navbar.scrolled {
+            background-color: white !important;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+        
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin: 0 10px;
+            position: relative;
+        }
+        
+        .navbar.scrolled .nav-link {
+            color: var(--text-color) !important;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        } 
+
+        .navbar-brand {
+    padding: 0;
+    margin-right: 20px; /* Adjust space between logo and nav items */
+}
+        
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dropdown-item {
+            padding: 8px 20px;
+            font-weight: 500;
+        }
+        
+        .dropdown-item:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }  
+
+
+
+        
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/images/logo-removebg-preview.png" alt="Mood" height="40" class="d-inline-block align-middle">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#aboutus">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="/#services" id="servicesDropdown">Services</a>
+                       
+                    </li>
+                
+                    <li class="nav-item ">
+                        <a class="nav-link dropdown-toggle" href="works.aspx" id="worksDropdown">Works</a>
+                    </li>
+                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.aspx">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <video class="hero-video" autoplay muted loop>
+            <source src="https://cdn.pixabay.com/video/2020/03/19/33933-398880351_tiny.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">Igniting Brands,<br> One Frame at a Time</h1>
+                    <p class="lead mb-5">At Mood, we don’t just create ads; we craft experiences that connect with your
+                        audience. Since 2018, we have collaborated with brands across education, hospitality, and multiple industries, producing over 50 commercials that bring
+                        visions to life.</p>
+                    <a href="contact-us.aspx" class="btn btn-primary-custom me-3">Get Started</a>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <a href="https://youtu.be/1TwnT5rOAsQ" class="play-btn" data-bs-toggle="modal" data-bs-target="#videoModal">
+                        <i class="fas fa-play"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Works -->
+    <section class="featured-work" id="works">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 class="section-title">Featured Works</h2>
+                    <p class="lead">Let our work speak for itself.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Work Item 1 -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="work-card">
+                        <img src="https://i.ytimg.com/vi/Lrw3XaAYlR0/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBsHjykU9-bRKI5uqYUkP8AGLvZGA" alt="GIVA - OLD COUPLE FILM" class="img-fluid">
+                        <div class="work-overlay">
+                            <i class="fas fa-play"></i>
+                            <h4>VIDVA_BEHIND_YOUR_SUCCES</h4>
+                            <p>COMMERCIAL</p>
+                            <a href="https://www.youtube.com/watch?v=Lrw3XaAYlR0" class="stretched-link" data-bs-toggle="modal" data-bs-target="#videoModal"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Work Item 2 -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="work-card">
+                        <img src="/images/GIIMS.png" alt="GIVA - PARTIING FILM" class="img-fluid">
+                        <div class="work-overlay">
+                            <i class="fas fa-play"></i>
+                            <h4>GIMS_KERALA</h4>
+                            <p>COMMERCIAL</p>
+                            <a href="https://www.youtube.com/watch?v=dYkKcGL1_qY" class="stretched-link" data-bs-toggle="modal" data-bs-target="#videoModal"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Work Item 3 -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="work-card">
+                        <img src="/images/unimoney.png" alt="GIVA - PROPOSAL FILM" class="img-fluid">
+                        <div class="work-overlay">
+                            <i class="fas fa-play"></i>
+                            <h4>UNI MONEY INDIA</h4>
+                            <p>COMMERCIAL</p>
+                            <a href="https://www.youtube.com/watch?v=9Ywg_6dO_qI" class="stretched-link" data-bs-toggle="modal" data-bs-target="#videoModal"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                 <!-- Work Item 1 -->
+                 <div class="col-md-6 col-lg-6">
+                    <div class="work-card">
+                        <img src="/images/vidva.png" alt="GIVA - OLD COUPLE FILM" class="img-fluid">
+                        <div class="work-overlay">
+                            <i class="fas fa-play"></i>
+                            <h4>VIDVA_BEHIND_YOUR_SUCCES</h4>
+                            <p>COMMERCIAL</p>
+                            <a href="https://www.youtube.com/watch?v=Lrw3XaAYlR0" class="stretched-link" data-bs-toggle="modal" data-bs-target="#videoModal"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Work Item 2 -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="work-card">
+                        <img src="/images/GIIMS.png" alt="GIVA - PARTIING FILM" class="img-fluid">
+                        <div class="work-overlay">
+                            <i class="fas fa-play"></i>
+                            <h4>GIMS_KERALA</h4>
+                            <p>COMMERCIAL</p>
+                            <a href="https://www.youtube.com/watch?v=dYkKcGL1_qY" class="stretched-link" data-bs-toggle="modal" data-bs-target="#videoModal"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Work Item 3 -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="work-card">
+                        <img src="/images/unimoney.png" alt="GIVA - PROPOSAL FILM" class="img-fluid">
+                        <div class="work-overlay">
+                            <i class="fas fa-play"></i>
+                            <h4>UNI MONEY INDIA</h4>
+                            <p>COMMERCIAL</p>
+                            <a href="https://www.youtube.com/watch?v=9Ywg_6dO_qI" class="stretched-link" data-bs-toggle="modal" data-bs-target="#videoModal"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add more work items here following the same pattern -->
+                
+            </div>
+            <div class="text-center mt-5">
+                <a href="works.aspx" class="btn btn-primary-custom">View All Works</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="aboutus">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <img src="https://cdn.pixabay.com/photo/2017/07/27/15/24/movie-2545676_1280.jpg" alt="About Artmonks" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-7">
+                    <h2 class="section-title">About</h2>
+                    <p class="lead">Since 2018, Mood has been shaping brands with compelling storytelling and powerful
+                        visuals. From reels to social media campaigns and full-fledged digital marketing, wetransform ideas into engaging content that resonates. With 50+ commercials under
+                        our belt, we have worked across education, hospitality, and various industries, delivering impactful advertisements tailored to any budget. With a nationwide reach, we ensure that your brand gets the visibility it deserves—nomatter where you are in India. Whether you're a startup or an established business, our creativity fuels your growth.</p>
+                    <a href="about-us.aspx" class="btn btn-primary-custom mt-3">Read More <i class="fas fa-chevron-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h2 class="section-title">Services</h2>
+                    <p class="mb-4">With expertise in reels, social media posts, and digital marketing, we ensure your
+                        brand makes an impact—no matter your budget or location</p>
+                    <a href="contact-us.aspx" class="btn btn-primary-custom">Get in touch</a>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <!-- Service 1 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="service-card">
+                                <i class="fas fa-clapperboard"></i>
+                                <h3>Reels & Video Production</h3>
+                                <p>Create engaging reels and videos with creative concepts and stunning visuals to captivate your audience.</p>
+                                <a href="video-production.aspx" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    
+                        <!-- Service 2 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="service-card">
+                                <i class="fas fa-share-alt"></i>
+                                <h3>Social Media Management</h3>
+                                <p>Manage your brand’s social presence across platforms with tailored content, consistent posting, and audience engagement.</p>
+                                <a href="social-media-management.aspx" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    
+                        <!-- Service 3 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="service-card">
+                                <i class="fas fa-lightbulb"></i>
+                                <h3>Digital Marketing Strategies</h3>
+                                <p>Develop results-driven digital strategies to reach, attract, and convert your ideal customers online.</p>
+                                <a href="digital-marketing-strategies.aspx" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    
+                        <!-- Service 4 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="service-card">
+                                <i class="fas fa-bullhorn"></i>
+                                <h3>Advertisements Across All Budgets</h3>
+                                <p>Launch impactful ad campaigns tailored to your budget, whether you're a startup or a growing brand.</p>
+                                <a href="advertisements.aspx" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="videoFrame" src="" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Video modal handler
+        const videoModal = document.getElementById('videoModal');
+        if (videoModal) {
+            videoModal.addEventListener('show.bs.modal', function(event) {
+                const button = event.relatedTarget;
+                const videoUrl = button.getAttribute('href');
+                const iframe = document.getElementById('videoFrame');
+                
+                // Extract YouTube ID from URL
+                const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+                const match = videoUrl.match(regExp);
+                
+                if (match && match[2].length == 11) {
+                    const videoId = match[2];
+                    iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+                } else {
+                    iframe.src = videoUrl;
+                }
+            });
+            
+            videoModal.addEventListener('hide.bs.modal', function() {
+                const iframe = document.getElementById('videoFrame');
+                iframe.src = '';
+            });
+        }
+    </script>
+</body>
+</html>
