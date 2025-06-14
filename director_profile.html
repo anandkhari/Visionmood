@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nikhil Premraj - Filmmaker from Kerala with 15+ years in media industry, television production, and corporate video"
+    />
+    <meta
+      name="keywords"
+      content="filmmaker, director, Kerala, television production, corporate video, Nikhil Premraj"
+    />
+    <meta name="author" content="Nikhil Premraj" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Nikhil Premraj - Director & Filmmaker Profile"
+    />
+    <meta
+      property="og:description"
+      content="Meet Nikhil Premraj, filmmaker from Kerala with deep passion for storytelling and visual craftsmanship"
+    />
+    <meta property="og:type" content="profile" />
+
+    <title>Nikhil Premraj - Director Profile | Filmmaker</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary-color: #2c3e50;
+        --accent-color: #e74c3c;
+        --text-color: #333;
+        --light-text: #666;
+        --bg-light: #f8f9fa;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: #000;
+      }
+
+      /* NAVBAR STYLING */
+      .navbar {
+        padding: 15px 0;
+        transition: all 0.3s ease;
+      }
+
+      .navbar-brand img {
+        height: 50px;
+        max-height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .navbar.scrolled {
+        background-color: black !important;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+      }
+
+      .nav-link {
+        color: white !important;
+        font-weight: 500;
+        margin: 0 10px;
+        position: relative;
+        font-size: 20px;
+      }
+
+      .navbar.scrolled .nav-link {
+        color: white !important;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-color);
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .navbar-brand {
+        padding: 0;
+        margin-right: 20px;
+      }
+
+      .dropdown-menu {
+        border: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .dropdown-item {
+        padding: 8px 20px;
+        font-weight: 500;
+      }
+
+      .dropdown-item:hover {
+        background-color: var(--primary-color);
+        color: white;
+      }
+
+      .profile-section {
+        background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 100%);
+        min-height: 100vh;
+        padding: 0;
+        padding-top: 100px; /* Add space for fixed navbar */
+      }
+
+      .profile-card {
+        background: white;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 40px;
+        padding: 60px 50px;
+      }
+
+      .director-name {
+        font-family: "Montserrat", sans-serif;
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: black;
+        margin-bottom: 30px;
+        line-height: 1.2;
+      }
+
+      .director-name .accent {
+        color: black;
+      }
+
+      .profile-text {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: var(--text-color);
+        margin-bottom: 25px;
+      }
+
+      .camera-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .bottom-section {
+        background: white;
+        padding: 60px 50px;
+        margin: 40px;
+        margin-top: 0;
+      }
+
+      .film-crew-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .highlight-text {
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+
+      @media (max-width: 768px) {
+        .profile-card {
+          margin: 20px;
+          padding: 40px 30px;
+        }
+
+        .director-name {
+          font-size: 2.5rem;
+        }
+
+        .bottom-section {
+          margin: 20px;
+          margin-top: 0;
+          padding: 40px 30px;
+        }
+
+        .camera-image {
+          height: 250px;
+          margin-top: 30px;
+        }
+
+        .film-crew-image {
+          height: 250px;
+          margin-top: 30px;
+        }
+      }
+
+      movies-section {
+        padding: 80px 0;
+        background: linear-gradient(
+          135deg,
+          #0a0a0a 0%,
+          #1a1a2e 50%,
+          #16213e 100%
+        );
+        position: relative;
+      }
+
+      /* Your existing autoShow animation */
+      .autoShow {
+        animation: autoShowAnimation both;
+        animation-timeline: view(70% 5%);
+      }
+
+      @keyframes autoShowAnimation {
+        from {
+          opacity: 0;
+          transform: translateY(200px) scale(0.3);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      .section-title {
+        font-size: 3rem;
+        font-weight: 900;
+        color: white;
+        margin-bottom: 50px;
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+        background-size: 300% 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradientShift 4s ease-in-out infinite;
+      }
+
+      @keyframes gradientShift {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .movie-card {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        /* Remove margin: 0 15px; - let Bootstrap handle spacing */
+        width: 250px;
+        height: 400px;
+      }
+
+      .movie-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+      }
+
+      .movie-poster {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      .movie-card:hover .movie-poster {
+        transform: scale(1.1);
+      }
+
+      .movie-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+        opacity: 1;
+        padding: 30px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      .movie-title {
+        font-size: 1.8rem;
+        font-weight: 900;
+        color: white;
+        margin-bottom: 5px;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      }
+
+      .movie-subtitle {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.9);
+        text-align: center;
+        font-weight: 600;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .section-title {
+          font-size: 2.5rem;
+        }
+
+        .movie-card {
+          height: 350px;
+          margin: 0 10px;
+        }
+
+        .movie-rank {
+          width: 60px;
+          height: 60px;
+          font-size: 2rem;
+        }
+
+        .movie-title {
+          font-size: 1.4rem;
+        }
+      }
+
+      .footer {
+        background-color: #000;
+        color: white;
+        padding: 2rem 0;
+      }
+
+      .footer-content {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        text-align: center;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        color: #999;
+        text-decoration: none;
+        font-size: 1.4rem;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+      }
+
+      .social-link:hover {
+        transform: translateY(-2px);
+        color: white;
+      }
+
+      .social-link.instagram:hover {
+        color: #e4405f;
+      }
+
+      .social-link.facebook:hover {
+        color: #1877f2;
+      }
+
+      .social-link.linkedin:hover {
+        color: #0077b5;
+      }
+
+      .social-link.youtube:hover {
+        color: #ff0000;
+      }
+
+      .copyright {
+        font-size: 0.85rem;
+        color: #666;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+      }
+
+      @media (max-width: 480px) {
+        .social-links {
+          gap: 1.5rem;
+        }
+
+        .social-link {
+          width: 40px;
+          height: 40px;
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="/images/logo-removebg-preview.png"
+            alt="Mood"
+            height="40"
+            class="d-inline-block align-middle"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#aboutus">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="index.html#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#works">Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid profile-section">
+      <div class="profile-card">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="director-name">
+              Nikhil <span class="accent">Premraj</span>
+            </h1>
+
+            <p class="profile-text">
+              I am a filmmaker from Kerala with a deep passion for storytelling
+              and visual craftsmanship. With over 15 years in the media
+              industry, I started in television production, creating content for
+              platforms like
+              <span class="highlight-text"
+                >Rose Bowl TV, Kairali TV, and Asianet</span
+              >.
+            </p>
+
+            <p class="profile-text">
+              Over the years, I expanded my expertise into filmmaking,
+              advertising, and corporate video production. As an assistant
+              director, I contributed to seven films, refining my craft under
+              industry veterans.
+            </p>
+
+            <p class="profile-text">
+              As an assistant director, I contributed to seven films, refining
+              my craft under industry veterans. I later worked as a chief
+              associate director on three films, including the
+              <span class="highlight-text"
+                >critically acclaimed Kuttanpillayude Shivarathri (2018)</span
+              >
+              in 2022. I made my directorial debut with
+              <span class="highlight-text">Aanapparambile World Cup</span>, a
+              sports drama starring Antony Varghese Pepe.
+            </p>
+          </div>
+
+          <div class="col-lg-6">
+            <img
+              src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+              alt="Professional film camera setup"
+              class="camera-image"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-section">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <p class="profile-text">
+              The film received widespread appreciation, with a
+              <span class="highlight-text"
+                >theatrical release on November 25, 2022</span
+              >, followed by OTT streaming on Sunnext.
+            </p>
+
+            <p class="profile-text">
+              Beyond cinema, I specialize in
+              <span class="highlight-text"
+                >corporate video production and ad filmmaking</span
+              >, crafting compelling visual narratives for brands, businesses,
+              and organizations. My company,
+              <span class="highlight-text">Mood</span>, has been delivering
+              high-quality commercials, social media content, and digital
+              marketing solutions across India since 2018.
+            </p>
+
+            <p class="profile-text">
+              With over
+              <span class="highlight-text">50 completed commercials</span>
+              spanning education, hospitality, and various other sectors, I
+              strive to create content that resonates and engages.
+            </p>
+
+            <p class="profile-text">
+              Looking forward to collaborating and bringing impactful stories to
+              life. Let's connect!
+            </p>
+
+            <p class="profile-text" style="margin-top: 40px">
+              <strong>Best regards,</strong><br />
+              <span class="highlight-text" style="font-size: 1.2rem"
+                >Nikhil Premraj</span
+              >
+            </p>
+          </div>
+
+          <div class="col-lg-6">
+            <img
+              src="https://imgs.search.brave.com/RnUG_9wYddme_CArmhwPlMVDsW_mCjYtHmm4d_uHf7g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM5/MTYyNTA2MC9waG90/by92aWRlby1jYW1l/cmEtaW4tZmlsbS1v/ci1tb3ZpZS1wcm9k/dWN0aW9uLW9uLXRy/aXBvZC1hbmQtcHJv/ZmVzc2lvbmFsLWdl/YXItd2hpY2gtc2hv/b3RpbmctaW4uanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPXhC/LUVOSTFvV1p4R3FY/SW1wd2p0bDJWcFUw/Q05mZGNkOE8tVXFt/amtXNW89"
+              alt="Film crew working on set"
+              class="camera-image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--movies section-->
+    <!-- Movies Section -->
+    <section class="movies-section">
+      <div class="container-fluid">
+        <h2 class="section-title text-center">Our Movies</h2>
+
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+          <div class="movie-card">
+            <img
+              src="/movie posters/Aanaparambile_World_Cup 1.png"
+              class="movie-poster"
+              alt="Movie 1"
+            />
+            <div class="movie-overlay">
+              <h5 class="movie-title"></h5>
+              <p class="movie-subtitle"></p>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <img
+              src="/movie posters/Adi_(film)_poster 1.png"
+              class="movie-poster"
+              alt="Movie 2"
+            />
+            <div class="movie-overlay">
+              <h5 class="movie-title"></h5>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <img
+              src="/movie posters/ayalum njanym thammil 1.png"
+              class="movie-poster"
+              alt="Movie 3"
+            />
+            <div class="movie-overlay">
+              <h5 class="movie-title"></h5>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <img
+              src="/movie posters/kerala cafe 2 1.png"
+              class="movie-poster"
+              alt="Movie 4"
+            />
+            <div class="movie-overlay">
+              <h5 class="movie-title"></h5>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <img
+              src="/movie posters/Kuttanpillayude_Sivarathri_poster 1.png"
+              class="movie-poster"
+              alt="Movie 5"
+            />
+            <div class="movie-overlay">
+              <h5 class="movie-title"></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--footer section-->
+
+    <div class="footer-divider"></div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="social-links">
+          <a
+            href="https://instagram.com"
+            class="social-link instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://facebook.com"
+            class="social-link facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://linkedin.com"
+            class="social-link linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://youtube.com"
+            class="social-link youtube"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+
+        <p class="copyright">© 2025 All rights reserved</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Navbar scroll effect and smooth scroll animations
+      document.addEventListener("DOMContentLoaded", function () {
+        // Navbar scroll effect
+        window.addEventListener("scroll", function () {
+          const navbar = document.querySelector(".navbar");
+          if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+          } else {
+            navbar.classList.remove("scrolled");
+          }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('.nav-link[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
+            }
+          });
+        }, observerOptions);
+
+        // Observe images for animation
+        document.querySelectorAll("img").forEach((img) => {
+          img.style.opacity = "0";
+          img.style.transform = "translateY(20px)";
+          img.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+          observer.observe(img);
+        });
+      });
+    </script>
+  </body>
+</html>
