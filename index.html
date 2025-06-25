@@ -402,7 +402,8 @@ body {
   }
 
   .about-section .section-title {
-    font-size: 26px;
+    font-size: 40px;
+    font-weight: bold;
   }
 }
 
@@ -441,13 +442,14 @@ body {
 
 
         .services-section .section-title{
-              font-size: 30px;
-  font-weight: bold;
-  color: white;
+              font-size: 40px;
+               font-weight: bold;
+                color: white;
   text-align: center;
   justify-content: center; 
   font-family: 'Montserrat', sans-serif;
         }
+ 
         
         .services-section p{
             font-size: 20px;
@@ -493,124 +495,6 @@ body {
         }
         
 
-  /* Movies Section CSS */
-.movies-section {
-    padding: 80px 0;
-    background: #0a0a0a;
-    position: relative;
-}
-
-/* Your existing autoShow animation */
-.autoShow {
-    animation: autoShowAnimation both;
-    animation-timeline: view(70% 5%);
-}
-
-@keyframes autoShowAnimation {
-    from {
-        opacity: 0;
-        transform: translateY(200px) scale(0.3);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-.section-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: white;
-    margin-bottom: 50px;
-    background-size: 300% 300%;
-    font-family: 'Montserrat', sans-serif;
-
-    
-}
-
-
-
-.movie-card {
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-    /* Remove margin: 0 15px; - let Bootstrap handle spacing */
-    width: 250px;
-    height: 400px;
-}
-
-.movie-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-}
-
-.movie-poster {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.movie-card:hover .movie-poster {
-    transform: scale(1.1);
-}
-
-.movie-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
-    opacity: 1;
-    padding: 30px 20px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-
-
-.movie-title {
-    font-size: 1.8rem;
-    font-weight: 900;
-    color: white;
-    margin-bottom: 5px;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.movie-subtitle {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.9);
-    text-align: center;
-    font-weight: 600;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2.5rem;
-    }
-    
-    .movie-card {
-        height: 350px;
-        margin: 0 10px;
-    }
-    
-    .movie-rank {
-        width: 60px;
-        height: 60px;
-        font-size: 2rem;
-    }
-    
-    .movie-title {
-        font-size: 1.4rem;
-    }
-}
   
 
 /* TEAM SECTION */
@@ -620,7 +504,7 @@ body {
 }
 
 .team-section .section-title {
-  font-size: 3rem;
+  font-size: 40px;
   font-weight: bold;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
@@ -629,7 +513,7 @@ body {
 /* Team Card Styling */
 .team-card {
   background-color: white;
-  padding: 15px;
+  padding: 10px;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
@@ -642,7 +526,7 @@ body {
 /* Team Image */
 .team-img {
   width: 100%;
-  height: 400px;
+  height: 350px;
   object-fit: cover;
   object-position: top;
   border-radius: 12px;
@@ -664,9 +548,9 @@ body {
 
 /* Learn More Button (Customize this class as needed) */
 .btn-primary-custom {
-  background-color: #007bff;
-  color: #fff;
-  padding: 8px 18px;
+  background-color: #ffd700;
+  color: #0f0f00;
+  padding: 8px 100px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
@@ -693,9 +577,9 @@ body {
 }
 
 .projects {
-  background-color: #111; /* Dark background for contrast */
+  background-color:black; /* Dark background for contrast */
   color: #ffd700; /* Yellow text */
-  padding: 60px 0;
+  
   text-transform: capitalize;
 }
 
@@ -730,6 +614,7 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
    transition: box-shadow 0.3s ease;
    
+   
 }
 
 .clients .client-slider-section{
@@ -755,7 +640,7 @@ body {
 }
 
 .client-section .section-title {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: bold;
   margin-bottom: 40px;
   color: #343a40; /* text-dark */
@@ -782,6 +667,11 @@ body {
   .contact-section {
   background:black;
   color: #fff;
+}
+
+.contact-section .section-title{
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .contact-section .form-control {
@@ -907,6 +797,29 @@ body {
     }
 }
 
+
+.whatsapp-float {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   background: #25D366;
+   color: white;
+   border-radius: 50%;
+   width: 60px;
+   height: 60px;
+   text-align: center;
+   font-size: 30px;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+   z-index: 100;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-decoration: none;
+}
+
+whatsapp-icon {
+   margin-top: 5px;
+}
         
     </style>
 </head>
@@ -970,7 +883,11 @@ body {
 </section>
 
 
-   
+   <!--whatsapp chat button-->
+
+   <a href="https://wa.me/14151234567?text=Hello" class="whatsapp-float" target="_blank">
+   <i class="fa fa-whatsapp whatsapp-icon"></i> <!-- Font Awesome icon -->
+</a>
 
       
 
@@ -989,7 +906,7 @@ body {
                 <!-- Work Item 1 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="work-card">
-                        <img src="/images/vidva.png.png" alt="GIVA - OLD COUPLE FILM" class="img-fluid">
+                        <img src="/images/VIDVAFINAL.png" alt="GIVA - OLD COUPLE FILM" class="img-fluid">
                         <div class="work-overlay">
                             <i class="fas fa-play"></i>
                             <h4>VIDVA BEHIND YOUR SUCCES</h4>
@@ -1002,12 +919,12 @@ body {
                 <!-- Work Item 2 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="work-card">
-                        <img src="./images/gims.png.png" alt="GIVA - PARTIING FILM" class="img-fluid">
+                        <img src="./images/charapara.png" alt="GIVA - PARTIING FILM" class="img-fluid">
                         <div class="work-overlay">
                             <i class="fas fa-play"></i>
-                            <h4>GIMS LOGISTICS ACADEMY</h4>
-                            <p>COMMERCIAL</p>
-                            <a href="https://www.youtube.com/watch?v=dYkKcGL1_qY" class="stretched-link" data-bs-toggle="modal" data-bs-target="#videoModal"></a>
+                            <h4>CHARA PARA KATHA PARA E1</h4>
+                            <p>WEBSERIES</p>
+                            <a href="https://www.youtube.com/watch?v=Ul9qG9xQhhs&t=242s" class="stretched-link" data-bs-toggle="modal" data-bs-target="#videoModal"></a>
                         </div>
                     </div>
                 </div>
@@ -1015,12 +932,12 @@ body {
                 <!-- Work Item 3 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="work-card">
-                        <img src="./images/unimoney.png.png" alt="GIVA - PROPOSAL FILM" class="img-fluid">
+                        <img src="./imageS/charaparakatha para.png" alt="GIVA - PROPOSAL FILM" class="img-fluid">
                         <div class="work-overlay">
                             <i class="fas fa-play"></i>
-                            <h4>UNI MONEY INDIA</h4>
-                            <p>COMMERCIAL</p>
-                            <a href="https://www.youtube.com/watch?v=9Ywg_6dO_qI" class="stretched-link" data-bs-toggle="modal" data-bs-target="#videoModal"></a>
+                            <h4>CHARA PARA KATHA PARA E2</h4>
+                            <p>WEBSERIES</p>
+                            <a href="https://youtu.be/kB98SffRjIk?si=Cf4OlC0Z0CB7EkHz" class="stretched-link" data-bs-toggle="modal" data-bs-target="#videoModal"></a>
                         </div>
                     </div>
                 </div>
@@ -1177,7 +1094,7 @@ body {
  <!-- team section Section -->
     <section class="team-section bg-light my-5" id="OurTeam"> 
   <div class="text-center">
-    <h2 class="section-title text-dark mt-3">Our Team</h2>
+    <h2 class="section-title text-dark my-3">OUR TEAM</h2>
   </div>
 
   <div class="container-fluid">
@@ -1186,7 +1103,7 @@ body {
       <!-- Team Member 1 -->
       <div class="col-lg-3 col-md-6">
         <div class="team-card text-center">
-          <img src="./images/WhatsApp Image 2025-06-12 at 13.11.52.jpeg" alt="Team Member 1" class="img-fluid rounded shadow team-img">
+          <img src="/images/WhatsApp Image 2025-06-12 at 13.11.52.jpeg" alt="Team Member 1" class="img-fluid rounded shadow team-img">
           <h4 class="team-name mt-3">NIKHIL PREMRAJ</h4>
           <p class="team-role">CREATIVE DIRECTOR</p>
           <a href="director_profile.html" class="btn btn-primary-custom">Learn More</a>
@@ -1197,7 +1114,7 @@ body {
       <!-- Team Member 2 -->
       <div class="col-lg-3 col-md-6">
         <div class="team-card text-center">
-          <img src="./images/WhatsApp Image 2025-06-12 at 13.11.53.jpeg" alt="Team Member 2" class="img-fluid rounded shadow team-img">
+          <img src="/images/WhatsApp Image 2025-06-12 at 13.11.53.jpeg" alt="Team Member 2" class="img-fluid rounded shadow team-img">
           <h4 class="team-name mt-3">SOORAJ JOSE</h4>
           <p class="team-role">SCRIPT WEITER</p>
           <a href="script_writer.html" class="btn btn-primary-custom ">Learn More</a>
@@ -1209,54 +1126,10 @@ body {
 </section>
 
 
-<!--movies section-->
-<!-- Movies Section -->
-<section class="movies-section ">
-    <div class="container-fluid">
-        <h2 class="section-title text-center ">Our Movies</h2>
-        
-        <div class="d-flex justify-content-center flex-wrap gap-3">
-            <div class="movie-card">
-                <img src="./Movies/Aanaparambile_World_Cup 1.png" class="movie-poster" alt="Movie 1">
-                <div class="movie-overlay">
-                    <h5 class="movie-title"></h5>
-                    <p class="movie-subtitle"></p>
-                </div>
-            </div>
-            
-            <div class="movie-card">
-                <img src= "./Movies/Kuttanpillayude_Sivarathri_poster 1.png" class="movie-poster" alt="Movie 2">
-                <div class="movie-overlay">
-                    <h5 class="movie-title"></h5>
-                </div>
-            </div>
-            
-            <div class="movie-card">
-                <img src="./Movies/ayalum njanym thammil 1.png" class="movie-poster" alt="Movie 3">
-                <div class="movie-overlay">
-                    <h5 class="movie-title"></h5>
-                </div>
-            </div>
-            
-            <div class="movie-card">
-                <img src="./Movies/kerala cafe 2 1.png" class="movie-poster" alt="Movie 4">
-                <div class="movie-overlay">
-                    <h5 class="movie-title"></h5>
-                </div>
-            </div>
-            
-            <div class="movie-card">
-                <img src="./Movies/Adi_(film)_poster 1.png" class="movie-poster" alt="Movie 5">
-                <div class="movie-overlay">
-                    <h5 class="movie-title"></h5>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <!--stats banner-->
-<div class="projects pt-5" id="stats">
+<div class="projects " id="stats">
   <div class="container py-5">
     <div class="row">
       <div class="col-sm-6 col-lg-3 text-center stat">
@@ -1282,20 +1155,47 @@ body {
   
 <!--clients section-->
 
-<section class="client-section bg-light my-5" id="aboutus"> 
-  <div class="container">
-    <h2 class="section-title text-dark mt-3">Client Section</h2>
+  
+  <!--owl carousel clients-->
+<div class="clients ">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2></h2>
+      </div>
 
-    <div class="row justify-content-center">
-      <div class="col-md-8 col-lg-6">
-        <img src="/images/cilents section.png" alt="About Artmonks" class="img-fluid rounded shadow">
+        <div class="owl-carousel client-slider-section bg-light py-5">
+          
+          <div class="item">
+            <img src="/images/jd institute.jpeg">
+          </div>
+        
+          <div class="item">
+            <img src="/images/kairali tmt.jpeg">
+          </div>
+        
+          <div class="item">
+            <img src="/images/voltas.jpeg">
+          </div>
+        
+           <div class="item">
+            <img src="/images/vythiri.jpeg">
+          </div>
+        
+          <div class="item">
+            <img src="/images/client logo 6.jpeg">
+          </div>
+        
+          <div class="item">
+            <img src="/images/madre.jpeg">
+          </div>
+        
+        </div>
+
+      
       </div>
     </div>
   </div>
-</section>
-
-
- 
 
 
 <!--contact section-->
@@ -1305,7 +1205,7 @@ body {
     <section class="contact-section py-5" id="contact">
   <div class="container">
     <div>
-        <h1 class="section-title text-center">Contact us</h1>
+        <h1 class="section-title text-center py-5">CONTACT US</h1>
     </div>
     <div class="row align-items-start">
       
@@ -1337,7 +1237,7 @@ body {
       <div class=" contact-form col-lg-6 col-sm-10">
         <form>
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Your name">
+            <input type="text" class="form-control" placeholder="Your name ">
           </div>
           <div class="mb-3">
             <input type="email" class="form-control" placeholder="Email Address">
@@ -1348,8 +1248,8 @@ body {
           <div class="mb-3">
             <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
           </div>
-          <button type="submit" class="btn btn-warning w-100 fw-bold">
-            Submit <i class="fas fa-arrow-up-right ms-2"></i>
+          <button type="submit" class="btn btn-warning w-100 ">
+            SUBMIT <i class="fas fa-arrow-up-right ms-2"></i>
           </button>
         </form>
       </div>
